@@ -1,2 +1,5 @@
-# algorithms
-Practice C / C ++ algorithm techniques
+# Project Algorithms
+This is project to practice algorithms and techniques.
+
+## Link for study
+
