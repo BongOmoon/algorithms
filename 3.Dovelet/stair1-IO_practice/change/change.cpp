@@ -1,18 +1,21 @@
 #include <cstdio>
 
-void swap(int *a, int *b) {
-    int tmp = *a;
-    *a = *b;
-    *b = tmp;
+int hundred, fifty, ten;
+
+void money_to_change(int cost) {
+    int change = 1000 - cost;
+
+    hundred = change / 100;
+    fifty = (change % 100) / 50;
+    ten = (change % 100 % 50) / 10;
 }
 
 int main() {
-
-    int x, y;
-    scanf("%d %d", &x, &y);
-
-    swap(&x, &y);
-    printf("%d %d\n", x, y);
+    int cost;
+    scanf("%d", &cost);
+    
+    money_to_change(cost);
+    printf("%d %d %d\n", hundred, fifty, ten);
 
     return 0;
 }
