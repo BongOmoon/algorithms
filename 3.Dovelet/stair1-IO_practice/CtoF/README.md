@@ -1,3 +1,3 @@
-# Problem 003 - swap
+# Problem name : CtoF
 
-Problem Link - <http://59.23.150.58/30stair/swap/swap.php?pname=swap>
+Problem Link - <http://59.23.150.58/30stair/CtoF/CtoF.php?pname=CtoF>
