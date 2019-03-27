@@ -1,12 +1,14 @@
-#include <iostream>
-#include <string>
+#include <cstdio>
+#include <cstring>
 
 typedef struct Stack {
-    int stack[10000];
-    int top = -1;
+    int data[10000];
+    int top = 0;
 };
 
-void push(Stack *stack);
+Stack stack;
+
+void push(int data);
 bool empty();
 int pop();
 int size();
@@ -16,39 +18,39 @@ int main(){
     int exec_num; //Number of instruction
     scanf("%d", &exec_num);
 
-    std::string str;
+    char str[6];
     for(int iter = 0; iter < exec_num; ++iter){
-        std::cin >> str;
+        scanf("%s", str);
 
-        if(str == "push"){
+        if(!strcmp(str, "push")){
             int data;
-            std::cin >> data;
+            scanf("%d", &data);
             push(data);
         }
-        else if(str == "pop"){
-            std::cout << pop() << std::endl;
+        else if(!strcmp(str, "pop")){
+            printf("%d\n", pop());
         }
-        else if(str == "size"){
-            std::cout << size() << std::endl;
+        else if(!strcmp(str, "size")){
+            printf("%d\n", size());
         }
-        else if(str == "empty"){
-            std::cout << empty() << std::endl;
+        else if(!strcmp(str, "empty")){
+            printf("%d\n", empty());
         }  
-        else if(str == "top"){
-            std::cout << top() << std::endl;
+        else if(!strcmp(str, "top")){
+            printf("%d\n", top());
         }
     }
 }
 
 void push(int data) {
-    stack[t++] = data;
+    stack.data[stack.top++] = data;
 }
 
 bool empty() {
-    if(t <= 0){
+    if(stack.top <= 0) {
         return true;
     }
-    else{
+    else {
         return false;
     }
 }
@@ -58,12 +60,12 @@ int pop() {
         return -1;
     }
     else {
-        return stack[--t];
+        return stack.data[--stack.top];
     }
 }
 
 int size() {
-    return t;
+    return stack.top;
 } 
 
 int top() {
@@ -71,7 +73,7 @@ int top() {
         return -1;
     }
     else {
-        return stack[t-1];
+        return stack.data[stack.top-1];
     }
 }
 
