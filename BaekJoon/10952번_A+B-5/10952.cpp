@@ -6,4 +6,6 @@ int main() {
 	while (scanf("%d %d", &a, &b), a&&b) {
 		printf("%d\n", a + b);
 	}
+
+	return 0;
 }
