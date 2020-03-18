@@ -1,12 +1,8 @@
 #include <cstdio>
 
-int main(){
-    int n,
-        sum = 0;
+int main() {
+    int n;
     scanf("%d", &n);
-
-    for(int i = 1; i <=n; i++){
-        sum += i;
-    }
-    printf("%d", sum);
+    printf("%d\n", (n * (n + 1) / 2));
+    return 0;
 }
