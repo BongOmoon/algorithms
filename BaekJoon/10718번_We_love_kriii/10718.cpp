@@ -1,8 +1,6 @@
-#include <iostream>
-
-using namespace std;
+#include <cstdio>
 
 int main(){
-            cout << "°­ÇÑÄ£±¸ ´ëÇÑÀ°±º" << endl;
-            cout << "°­ÇÑÄ£±¸ ´ëÇÑÀ°±º" << endl;
+    printf("ê°•í•œì¹œêµ¬ ëŒ€í•œìœ¡êµ°\nê°•í•œì¹œêµ¬ ëŒ€í•œìœ¡êµ°\n");
+    return 0;
 }
